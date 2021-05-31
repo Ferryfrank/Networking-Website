@@ -169,7 +169,7 @@ label {
 .box4 .area2-details i {
     background-color: inherit;
     font-size: 1.4rem;
-    border: 10px solid green;
+    border: 8px solid green;
     height: 50px;
     width: 50px;
     text-align: center;
@@ -476,6 +476,7 @@ td .area2 .area2-details {
     }
     to{
         height: 40%;
+
     }
 }
 @keyframes anim2-reverse {
@@ -498,7 +499,7 @@ td .area2 .area2-details {
 }
 
 /* Responsive Screen */
-@media screen and (max-width: 500px){
+@media screen and (max-width: 800px){
     .wrapper {
         position: relative;
     }
@@ -534,7 +535,7 @@ td .area2 .area2-details {
         left: 0;
         width: 100%;
         height: 0;
-        bottom: 0;
+        top: 60px;
         transition: height 0.3s;
         overflow: hidden;
         opacity: 0.98;
@@ -554,10 +555,6 @@ td .area2 .area2-details {
         display: inline-block;
         cursor: pointer;
         transition: top 0.3s;
-    }
-    .navigation-btn.active {
-        top: 62%;
-        animation: anim3 0.36s linear;
     }
     .box2 .profile-details {
         border: none;
