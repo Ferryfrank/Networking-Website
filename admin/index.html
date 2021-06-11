@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="side-panel">
+            <!-- Sidebar - Brand -->
+            <ul class="navbar-nav accordion" id="accordionSidebar">
+                <a class="sidebar-brand d-flex align-items-left justify-content-left" href="index.html">
+                    <div class="sidebar-brand-text mx-3">Logo</div>
+                </a>
+
+                <!-- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                    <div class="sidebar-brand-icon">
+                        <i class="material-icons">menu</i>
+                    </div>
+                    
+                </a> -->
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item active mt-5">
+                    <a class="nav-link collapsed" href="index.html" >
+                        Dashboard
+                    </a>
+                </li>
+
+                <!-- Dropdown menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed dropdwn" href="" >
+                        Network
+                    </a>
+                    <div class="dropdown">
+                        <ul>
+                            <li>
+                                <a class="nav-link" href="network.html" >Geonology Tree</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="downline_search.html" >Downline Search</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="login_step1.html" >Signup</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed dropdwn" href="" >
+                        User Management
+                    </a>
+                    <div class="dropdown">
+                        <ul>
+                            <li>
+                                <a class="nav-link collapsed" href="pending_users.html" >Pending Users</a>
+                            </li>
+                            <li>
+                                <a class="nav-link collapsed" href="active_users.html" >Active Users</a>
+                            </li>
+                            <li>
+                                <a class="nav-link collapsed" href="suspended_users.html" >Suspended Users</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pending_payout_request.html" >
+                        Payout Request
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pending_food-items_request.html" >
+                        Food Items Tequest
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="account.html" >
+                        Profile Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="how_it_works.html" >
+                        How it Works
+                    </a>
+                </li>
+         
+    
+            </ul>
+        </div>
+        <div class="main-panel">
+            <!-- TOP NAVIGATION -->
+            <div class="top-nav">
+                <div class="navigation-btn" id="navBtn">
+                    <i class="material-icons">menu</i>
+                </div>
+                <ul class="nav">
+                    <li class="mt-2 ml-4 mr-4" id="profile">
+                        <p class="profile-name">Emmanuel Lucky <i class="material-icons">arrow_drop_down</i></p>
+                        <div class="actions">
+                            <ul class="">
+                                <li class="nav-item"><a class="nav-link" href="">Profile</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Earnings</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Logout</a></li>
+                            </ul>
+                        </div>
+                        </li>
+                    <li class="">
+                        <div class="profile-image">
+                            <img src="../images/clem-onojeghuo-2.jpg" width="100%" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <div class="content admin">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="box box4">
+                                    <div class="area2 mt-4">
+                                        <div class="area2-details">
+                                            <i class="material-icons yellow">people</i>
+                                            <div class="ml-2">
+                                                 <p class="value mb-0">52.41k</p>
+                                                 <p class="">All Users</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                    <div class="box box4">
+                                        <div class="area2 mt-4">
+                                            <div class="area2-details">
+                                                <i class="material-icons blue">manage_accounts</i>
+                                                <div class="ml-2">
+                                                     <p class="value mb-0">18.9k</p>
+                                                     <p class="">Pending Users</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-12 mt-3 ">
+                                <div class="box scroll">
+                                    <h4 class="ml-3 mt-2">Withdrawal Request</h4>
+                                    <div class="info-box">
+                                        <ul class="nav nav-tabs nav-justified mb-3" id="myTab" role="tablist">
+                                            <li class="nav-item">
+                                              <a class="nav-link active" id="income-tab" data-toggle="tab" href="#income" role="tab" aria-controls="income" aria-selected="true">Money</a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" id="commission-tab" data-toggle="tab" href="#commission" role="tab" aria-controls="commission" aria-selected="false">Food Items</a>
+                                            </li>
+                                          </ul>
+                                          <!-- TAB FOR DESCRIPTION -->
+                                          <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active" id="income" role="tabpanel" aria-labelledby="income-tab">
+                                                <table class="table">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>Registration Fee</td>
+                                                        <td class="text-success">2,000</td>
+                                                        <td class="text-right"><button class="btn btn-sm btn-purpule">RB</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Registration Fee</td>
+                                                        <td class="text-success">3,000</td>
+                                                        <td class="text-right"><button class="btn btn-sm btn-purpule">RB</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Registration Fee</td>
+                                                        <td class="text-success">1,000</td>
+                                                        <td class="text-right"><button class="btn btn-sm btn-purpule">RB</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Registration Fee</td>
+                                                        <td class="text-success">500</td>
+                                                        <td class="text-right"><button class="btn btn-sm btn-purpule">RB</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Registration Fee</td>
+                                                        <td class="text-success">2,000</td>
+                                                        <td class="text-right"><button class="btn btn-sm btn-grey">RB</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Registraiton Fee</td>
+                                                        <td class="text-success">2,000</td>
+                                                        <td class="text-right"><button class="btn btn-sm btn-grey">RB</button></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                        
+                                            <!-- TAB FOR SPECIFICATIONS -->
+                                            <div class="tab-pane fade" id="commission" role="tabpanel" aria-labelledby="commission-tab">
+                                                
+                                            </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box box4 text-center mini-nav">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <i class="material-icons blue">person_add</i>
+                                            <p class="mb-0"><a href="add_admin.html" class="text-grey">Add Admin</a></p>
+                                        </div>
+                                        <div class="col-4">
+                                            <i class="material-icons danger">security</i>
+                                            <p class="mb-0"><a href="payout.html" class="text-grey">Manage Password</a></p>
+                                        </div>
+                                        <div class="col-4">
+                                            <i class="material-icons">info</i>
+                                            <p class="mb-0"><a href="network.html" class="text-grey">How it works</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="box box4">
+                                    <div class="area2 mt-4">
+                                        <div class="area2-details">
+                                            <i class="material-icons green">price_change</i>
+                                            <div class="ml-2">
+                                                 <p class="value mb-0">44.55k</p>
+                                                 <p class="">Total Income</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                    <div class="box box4">
+                                        <div class="area2 mt-4">
+                                            <div class="area2-details">
+                                                <i class="material-icons red">credit_card</i>
+                                                <div class="ml-2">
+                                                     <p class="value mb-0">2.71k</p>
+                                                     <p class="">Pending Payouts</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-12 mt-3 ">
+                                <div class="box scroll">
+                                    <h4 class="ml-3 mt-2">Lastest Downlines</h4>
+                                    <table class="table">
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                                <div class="area2">
+                                                    <div class="area2-details">
+                                                        <img src="../images/img1.jpg" width="100%" alt="">
+                                                        <div class="ml-2">
+                                                             <h5 class="mb-0">44.55k</h5>
+                                                             <p class="mb-0 text-success">Paid Amounts</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">$2500</h5>
+                                                <p class="mb-0">3rd April 2021</p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                                <div class="area2">
+                                                    <div class="area2-details">
+                                                        <img src="../images/img1.jpg" width="100%" alt="">
+                                                        <div class="ml-2">
+                                                             <h5 class="mb-0">44.55k</h5>
+                                                             <p class="mb-0 text-success">Paid Amounts</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">$2500</h5>
+                                                <p class="mb-0">3rd April 2021</p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                                <div class="area2">
+                                                    <div class="area2-details">
+                                                        <img src="../images/img1.jpg" width="100%" alt="">
+                                                        <div class="ml-2">
+                                                             <h5 class="mb-0">44.55k</h5>
+                                                             <p class="mb-0 text-success">Paid Amounts</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">$2500</h5>
+                                                <p class="mb-0">3rd April 2021</p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                                <div class="area2">
+                                                    <div class="area2-details">
+                                                        <img src="../images/img1.jpg" width="100%" alt="">
+                                                        <div class="ml-2">
+                                                             <h5 class="mb-0">44.55k</h5>
+                                                             <p class="mb-0 text-success">Paid Amounts</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">$2500</h5>
+                                                <p class="mb-0">3rd April 2021</p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                                <div class="area2">
+                                                    <div class="area2-details">
+                                                        <img src="../images/img1.jpg" width="100%" alt="">
+                                                        <div class="ml-2">
+                                                             <h5 class="mb-0">44.55k</h5>
+                                                             <p class="mb-0 text-success">Paid Amounts</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="mb-0">$2500</h5>
+                                                <p class="mb-0">3rd April 2021</p>
+                                            </td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box box4 text-center mini-nav">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <i class="material-icons purple">person_add</i>
+                                            <p class="mb-0"><a href="add)user.html" class="text-grey">Add User</a></p>
+                                        </div>
+                                        <div class="col-3">
+                                            <i class="material-icons brown">payments</i>
+                                            <p class="mb-0"><a href="payout.html" class="text-grey">Payout</a></p>
+                                        </div>
+                                        <div class="col-3">
+                                            <i class="material-icons green">people</i>
+                                            <p class="mb-0"><a href="network.html" class="text-grey">Network</a></p>
+                                        </div>
+                                        <div class="col-3">
+                                            <i class="material-icons brown">fastfood</i>
+                                            <p class="mb-0"><a href="food-items.html" class="text-grey">Food Items</a></p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

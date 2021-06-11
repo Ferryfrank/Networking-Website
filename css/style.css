@@ -45,6 +45,9 @@
 .navbar-nav .nav-item.active .nav-link {
     color: #3b77c0;
 }
+.dropdwn .collapsed{
+    display: block;
+}
 .dropdown {
     display: none;
     padding-left: 1rem;
@@ -458,6 +461,92 @@ td .area2 .area2-details {
 .search button {
     width: 100%;
 }
+
+/* ADMIN STYLES */
+
+.group ul{
+    list-style: none;
+    margin-left: 3rem;
+}
+.group ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.group ul li .text-link {
+    text-decoration: none;
+    color: inherit;
+}
+.group ul li.active {
+    border-bottom: 2px solid #c50fc5;
+}
+table .eye {
+    color: #77abeb;
+}
+table .eye i:hover {
+    cursor: pointer;
+}
+table .danger {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(207, 0, 0);
+    color: #fff;
+}
+table .success {
+    display: inline-block;
+    color: rgb(5, 170, 5);
+}
+table .danger i {
+    font-size: 1rem;
+    margin-right: 1.4px;
+    margin-top: 2px;
+}
+.admin .box4 .area2-details i {
+    margin-right: 2rem;
+    padding-top: 0.8rem;
+}
+.admin .box4 .area2-details i.blue {
+    border: none;
+    background-color: rgba(0, 0, 255, 0.4);
+    color: #fff;
+}
+.admin .box4 .area2-details i.yellow {
+    border: none;
+    background-color: rgba(255, 255, 0, 0.4);
+    color: rgb(179, 179, 179);
+}
+.admin .box4 .area2-details i.red {
+    border: none;
+    background-color: rgba(255, 0, 0, 0.4);
+    color: #fff;
+}
+.admin .box4 .area2-details i.green {
+    border: none;
+    background-color: rgba(0, 128, 0, 0.4);
+    color: #fff;
+}
+.mini-nav .blue {
+    border-color: rgba(0, 0, 255, 0.4);
+    color: rgba(0, 0, 255, 0.4);
+}
+.mini-nav .danger {
+    border-color: red;
+    color: red;
+}
+.mini-nav .purple {
+    border-color: #c50fc5;
+    color: #c50fc5;
+}
+.mini-nav .brown {
+    border-color: rgba(255, 0, 0, 0.4);
+    color: rgba(255, 0, 0, 0.4);
+}
+.mini-nav .green {
+    border-color: rgba(0, 128, 0, 0.4);
+    color: rgba(0, 128, 0, 0.4);
+}
+
 
 
 

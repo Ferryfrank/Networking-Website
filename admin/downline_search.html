@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downline Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper wider-wrapper">
+        <div class="side-panel">
+            <!-- Sidebar - Brand -->
+            <ul class="navbar-nav accordion" id="accordionSidebar">
+                <a class="sidebar-brand d-flex align-items-left justify-content-left" href="index.html">
+                    <div class="sidebar-brand-text mx-3">Logo</div>
+                </a>
+
+                <!-- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                    <div class="sidebar-brand-icon">
+                        <i class="material-icons">menu</i>
+                    </div>
+                    
+                </a> -->
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item mt-5">
+                    <a class="nav-link collapsed" href="index.html" >
+                        Dashboard
+                    </a>
+                </li>
+
+                <!-- Dropdown menu -->
+                <li class="nav-item active">
+                    <a class="nav-link collapsed dropdwn" href="" >
+                        Network
+                    </a>
+                    <div class="dropdown">
+                        <ul>
+                            <li>
+                                <a class="nav-link" href="network.html" >Geonology Tree</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="downline_search.html" >Downline Search</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="login_step1.html" >Signup</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed dropdwn" href="" >
+                        User Management
+                    </a>
+                    <div class="dropdown">
+                        <ul>
+                            <li>
+                                <a class="nav-link collapsed" href="pending_users.html" >Pending Users</a>
+                            </li>
+                            <li>
+                                <a class="nav-link collapsed" href="active_users.html" >Active Users</a>
+                            </li>
+                            <li>
+                                <a class="nav-link collapsed" href="suspended_users.html" >Suspended Users</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pending_payout_request.html" >
+                        Payout Request
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pending_food-items_request.html" >
+                        Food Items Tequest
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="account.html" >
+                        Profile Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="how_it_works.html" >
+                        How it Works
+                    </a>
+                </li>
+         
+    
+            </ul>
+        </div>
+        <div class="main-panel">
+            <!-- TOP NAVIGATION -->
+            <div class="top-nav">
+                <div class="navigation-btn" id="navBtn">
+                    <i class="material-icons">menu</i>
+                </div>
+                <ul class="nav">
+                     
+                    <li class="mt-2 ml-4 mr-4" id="profile">
+                        <p class="profile-name">Emmanuel Lucky <i class="material-icons">arrow_drop_down</i></p>
+                        <div class="actions">
+                            <ul class="">
+                                <li class="nav-item"><a class="nav-link" href="">Profile</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Earnings</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Logout</a></li>
+                            </ul>
+                        </div>
+                        </li>
+                    <li class="">
+                        <div class="profile-image">
+                            <img src="../images/clem-onojeghuo-2.jpg" width="100%" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- MAIN CONTENT -->
+            <div class="content network-body pb-5">
+                <div class="search text-center">
+                    <p>User your search will appear at the top of the tree</p>
+                    <form action="">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-3 pr-0"><label for=" ">Enter Username</label></div>
+                                <div class="col-6 pl-0 pr-0"><input type="search" class="form-control"></div>
+                                <div class="col-3 pl-0"><button class="btn btn-success">Search</button></div>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="text-danger">USER NOT FOUND!</p>
+                </div>
+                <canvas id="canvas" width="1200" height="450" ></canvas>
+                <div class="network">
+                    <div class="row">
+                        <!-- First line -->
+                        <div class="col-12">
+                            <div class="users">
+                                <div class="users-image">
+                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                </div>
+                                <div class="users-text">
+                                    <p>username</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Second Line -->
+                        <div class="col-6">
+                            <div class="line1"></div>
+                            <div class="users">
+                                <div class="users-image">
+                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                </div>
+                                <div class="users-text">
+                                    <p>username</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="users">
+                                <div class="users-image">
+                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                </div>
+                                <div class="users-text">
+                                    <p>username</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Third Line -->
+                        <div class="col-3">
+                            <div class="row">
+    
+                                <!-- Third: first line -->
+                                <div class="col-12">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Third: second lilne -->
+                                <div class="col-6">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Third: third line -->
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+    
+                                <!-- Third: first line -->
+                                <div class="col-12">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Third: second lilne -->
+                                <div class="col-6">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Third: third line -->
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+    
+                                <!-- Third: first line -->
+                                <div class="col-12">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Third: second lilne -->
+                                <div class="col-6">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Third: third line -->
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+    
+                                <!-- Third: first line -->
+                                <div class="col-12">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <!-- Third: second lilne -->
+                                <div class="col-6">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="users">
+                                        <div class="users-image">
+                                            <img src="../images/img1.jpg" width="100%" alt="image">
+                                        </div>
+                                        <div class="users-text">
+                                            <p>username</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Third: third line -->
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-3 p-0">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="users">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                                <div class="users-text">
+                                                    <p class="p-0">username</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <img src="../images/img1.jpg" width="100%" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 p-0">
+                                            <div class="users text-left">
+                                                <div class="users-image">
+                                                    <p><img src="../images/img1.jpg" width="100%" alt="image"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-modal">
+                    <div class="box box3 mb-5">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="profile-details">
+                                    <div class="img mb-2">
+
+                                    </div>
+                                    <div class="fullname">
+                                        <h6>Emmanuel Lucky</h6>
+                                    </div>
+                                    <div class="username">
+                                        <p class="mb-0">@emmaluck22</p>
+                                    </div>
+                                    <div class="email">
+                                        <p>emmanuellucky@gmail.com</p>
+                                    </div>
+                                    <button class="btn btn-sm btn-grey">change password</button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="rank-area text-center">
+                                    <div class="">
+                                        <h4>Rank: <span>Silver</span></h4>
+                                        <p class="mb-0  ">Membership Package:<br><strong>Basic Package</strong></p>
+                                    </div>
+                                    <hr>
+                                    <div class="area2 text-center ">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="area2-details">
+                                                    <i class="material-icons orange">person</i>
+                                                    <div class="ml-2">
+                                                        <p class="mb-0">Personal PV</p>
+                                                         <p class="value">760544</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="area2-details">
+                                                    <i class="material-icons blue">west</i>
+                                                    <div class="ml-2">
+                                                        <p class="mb-0">Left Corry</p>
+                                                         <p class="value">13</p>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                
+                                            </div>
+                                            <div class="col">
+                                                <div class="area2-details last">
+                                                    <i class="material-icons blue">east</i>
+                                                    <div class="ml-2">
+                                                        <p class="mb-0">Right Corry</p>
+                                                         <p class="value">9</p>
+                                                    </div>
+                                                </div>
+                                            
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/canvas.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

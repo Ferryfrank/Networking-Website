@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="side-panel">
+            <!-- Sidebar - Brand -->
+            <ul class="navbar-nav accordion" id="accordionSidebar">
+                <a class="sidebar-brand d-flex align-items-left justify-content-left" href="index.html">
+                    <div class="sidebar-brand-text mx-3">Logo</div>
+                </a>
+
+                <!-- <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+                    <div class="sidebar-brand-icon">
+                        <i class="material-icons">menu</i>
+                    </div>
+                    
+                </a> -->
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item mt-5">
+                    <a class="nav-link collapsed" href="index.html" >
+                        Dashboard
+                    </a>
+                </li>
+
+                <!-- Dropdown menu -->
+                <li class="nav-item active">
+                    <a class="nav-link collapsed dropdwn" href="" >
+                        Network
+                    </a>
+                    <div class="dropdown">
+                        <ul>
+                            <li>
+                                <a class="nav-link" href="network.html" >Geonology Tree</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="downline_search.html" >Downline Search</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="login_step1.html" >Signup</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed dropdwn" href="" >
+                        User Management
+                    </a>
+                    <div class="dropdown">
+                        <ul>
+                            <li>
+                                <a class="nav-link collapsed" href="pending_users.html" >Pending Users</a>
+                            </li>
+                            <li>
+                                <a class="nav-link collapsed" href="active_users.html" >Active Users</a>
+                            </li>
+                            <li>
+                                <a class="nav-link collapsed" href="suspended_users.html" >Suspended Users</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+    
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pending_payout_request.html" >
+                        Payout Request
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pending_food-items_request.html" >
+                        Food Items Request
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="account.html" >
+                        Profile Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="how_it_works.html" >
+                        How it Works
+                    </a>
+                </li>
+         
+    
+            </ul>
+        </div>
+        <div class="main-panel">
+            <!-- TOP NAVIGATION -->
+            <div class="top-nav">
+                <div class="navigation-btn" id="navBtn">
+                    <i class="material-icons">menu</i>
+                </div>
+                <ul class="nav">
+                     
+                    <li class="mt-2 ml-4 mr-4" id="profile">
+                        <p class="profile-name">Emmanuel Lucky <i class="material-icons">arrow_drop_down</i></p>
+                        <div class="actions">
+                            <ul class="">
+                                <li class="nav-item"><a class="nav-link" href="">Profile</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Earnings</a></li>
+                                <li class="nav-item"><a class="nav-link" href="">Logout</a></li>
+                            </ul>
+                        </div>
+                        </li>
+                    <li class="">
+                        <div class="profile-image">
+                            <img src="../images/clem-onojeghuo-2.jpg" width="100%" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="login-part">
+                    <div class="login-steps">
+                        <div class="line"></div>
+                        <div class="">
+                            <p class="step">1</p>
+                            <p class="step">2</p>
+                            <p class="step active">3</p>
+                            <p class="step">4</p>
+                        </div>
+                        
+                    </div>
+                    <div class="box">
+                        <h5 class="text-center mt-1">Login Information</h5>
+                        <form action="login_step3-sub.html" class="p-3">
+                            <div class="form-group">
+                                <label for="">Username</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Password</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Confirm Password</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Security Question</label>
+                                <select name="" id="" class="form-control">
+                                    <option value=""></option>
+                                    <option value="">What is favourtie food?</option>
+                                    <option value="">What is favourtie food?</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Answer</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="Check">
+                                <label class="form-check-label" for="Check">
+                                  I accept <a href="">terms and conditions</a> 
+                                </label>
+                              </div>
+                            <div class="text-center">
+                                <button class="btn btn-success pl-5 pr-5">Next</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/main.js"></script>
+</body>
+</html>

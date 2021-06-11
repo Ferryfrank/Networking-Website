@@ -45,16 +45,16 @@ navBtn.addEventListener('click', () => {
         }
     });
 
-    const dropDownBtn = document.querySelector('#dropdown');
+    const dropDownBtn = Array.from(document.querySelectorAll('.dropdwn'));
     
+    dropDownBtn.forEach(curr => {
 
-    dropDownBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+        curr.addEventListener('click', (e) => {
+            e.preventDefault();
+            curr.classList.toggle('dark-bg');
+            curr.parentElement.querySelector('.dropdown').classList.toggle('active');
 
-        dropDownBtn.classList.toggle('dark-bg');
-        document.querySelector('.dropdown').classList.toggle('active');
-
+        })
     })
-
 }
 
